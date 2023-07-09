@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #d4d4d4;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.resume_wrapper {
+    display: flex;
+    width: 800px;
+    margin: 50px auto;
+    background: #ffffff;
+    padding: 10px;
+}
+
+.resume_wrapper .resume_left {
+    width: 35%;
+    background: #1b2a21;
+}
+
+.resume_wrapper .resume_left .resume_image {
+    width: 100%;
+}
+
+.resume_wrapper .resume_left .resume_image img {
+    width: 100%;
+    display: block;
+}
+
+.resume_wrapper .resume_title {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 10px;
+    letter-spacing: 4px;
+}
+
+.resume_wrapper .resume_left .resume_info {
+    color: #84838b;
+}
+
+.resume_wrapper .resume_left .resume_bottom {
+    padding: 20px 30px;
+}
+
+.resume_wrapper .resume_item {
+    padding: 20px 0;
+    border-bottom: 1px solid #17753c;
+}
+
+.resume_wrapper .resume_item:last-child {
+    border-bottom: 0;
+}
+
+.resume_wrapper .resume_left .resume_namerole {
+    display: none;
+}
+
+.resume_wrapper .resume_namerole .name {
+    font-size: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+}
+
+.resume_wrapper .resume_left .resume_namerole .role {
+    color: #ffffff;
+}
+
+.resume_wrapper .resume_left .resume_contact .resume_info:last-child {
+    margin-top: 10px;
+}
+
+.resume_wrapper .resume_left .resume_contact .resume_subtitle {
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.resume_wrapper .resume_left .resume_skills .skills_list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.resume_wrapper .resume_right {
+    width: 65%;
+    padding: 20px 40px;
+    color: #3f3a3a;
+}
+
+.button {
+    background-color: #567c57;
+    border: none;
+    color: white;
+    padding: 8px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.resume_wrapper .resume_right .resume_namerole .name {
+    color: #000000;
+    font-size: 30px;
+}
+
+.resume_wrapper .resume_right .resume_namerole .role {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.resume_wrapper .resume_right .resume_item .resume_title {
+    color: #26252d;
+}
+
+.resume_wrapper .resume_right .resume_data {
+    display: flex;
+}
+
+.resume_wrapper .resume_right .resume_data .year {
+    padding-right: 35px;
+    width: 115px;
+    position: relative;
+}
+
+.resume_wrapper .resume_right .resume_data .content {
+    padding-left: 35px;
+    margin-bottom: 20px;
+    width: calc(100% - 115px);
+}
+
+.resume_wrapper .resume_right .resume_data .year:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #ffffff00;
+    border: 1px solid #ffffff00;
+    border-radius: 50%;
+}
+
+.resume_wrapper .resume_right .resume_data .year:after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 4px;
+    width: 3px;
+    height: 90%;
+    background: #ffffff00;
+}
+
+.resume_wrapper .resume_right .resume_data:last-child .year:after {
+    display: none;
+}
+
+.resume_wrapper .resume_right .resume_interests .resume_info {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.resume_wrapper .resume_right .resume_interests .interests .int_icon {
+    font-size: 38px;
+    color: #229f54;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.gallery img {
+    width: 330px;
+    height: 200px;
+    margin-bottom: 0px;
+}
+
+@media screen and (max-width: 800px) {
+    .resume_wrapper .resume_right .resume_namerole {
+        display: none;
+    }
+    .resume_wrapper .resume_left .resume_namerole {
+        display: block;
+    }
+    .resume_wrapper {
+        width: 95%;
+        margin: 10px auto;
+        flex-direction: column;
+    }
+    .resume_wrapper .resume_left,
+    .resume_wrapper .resume_right {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .resume_wrapper .resume_right {
+        padding: 20px 30px;
+    }
+    .resume_wrapper .resume_right .resume_data {
+        flex-direction: column;
+    }
+    .resume_wrapper .resume_right .resume_data .year {
+        padding: 0;
+        margin-bottom: 5px;
+        width: 100%;
+        color: #130c28;
+    }
+    .resume_wrapper .resume_right .resume_data .year:before,
+    .resume_wrapper .resume_right .resume_data .year:after {
+        display: none;
+    }
+    .resume_wrapper .resume_right .resume_data .content {
+        width: 100%;
+        padding: 0;
+    }
+    .resume_wrapper .resume_right .resume_interests .interests .int_icon {
+        font-size: 30px;
+    }
+}
